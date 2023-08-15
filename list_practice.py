@@ -20,9 +20,10 @@ def count_positives_sum_negatives(arr):
 num_list = []
 user_numbers = input("Give me random numbers, positive and negative: ")
 split_list = user_numbers.split(sep=", ")
-print(split_list)
 
 for num in split_list:
-    num_list.append(int(num))
+    try:
+        num_list.append(int(num))
+    except ValueError:
+        continue
 result = count_positives_sum_negatives(num_list)
-print(result)
