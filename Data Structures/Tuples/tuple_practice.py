@@ -17,6 +17,10 @@ hero2 = ("Wonder Woman", "Diana Prince")
 awesome_team = (hero1, hero2)
 print(awesome_team)
 
+# Merging tuples
+awesome_team = hero1 + hero2
+print(awesome_team)
+
 # Search
 print("Batman" in awesome_team)
 
