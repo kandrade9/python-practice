@@ -32,3 +32,30 @@ print(fib(5))
 # First, we handle our base cases. We know that the first two values are always 0 and 1, so that is where we can stop our recursive calls.
 # If n is larger than 2, then it will be the sum of the two values before it.
 
+# Factorial For Loop Approach
+def factorial(n):
+    result = 1
+    if n <= 0:
+        return -1
+    for r in range(1, n+1):
+        result *= r
+        print(result)
+    return result
+
+# Factorial Recursion Approach
+def factorial(n):
+    # Base case
+    if n == 0 or n == 1:
+        return 1
+
+    if n < 0:
+        return -1
+
+    # Recursive call
+    return n * factorial(n - 1)
+print(factorial(5))
+
+# Base case is when n is 1 or 0 since it’s the minimum we can go. In either case, we return 1, since it is the factorial for both these values.
+# Other than that, the only special case is if n is negative. That can be handled with a simple if statement.
+# Each call returns a product back to the previous call where the product is multiplied with the current value of n in that particular call.
+
