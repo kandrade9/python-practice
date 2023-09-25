@@ -1,0 +1,19 @@
+class Shape:
+    sname = "Shape"
+
+    def getName(self):
+        return self.sname
+
+
+class XShape(Shape):
+    def __init__(self, name):
+        self.xsname = name
+
+    def getName(self):  # overriden method
+        return super().getName() + ", " + self.xsname
+
+circle = XShape("Circle")
+print(circle.getName())
+
+# The super() function is used to call the parent class method getName().
+# With the help of the super() function, the getName() method returns the parent class sname, and which then gets appended with the derived class xsname before returning
